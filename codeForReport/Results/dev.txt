@@ -1,0 +1,24 @@
+Midazolam fitted (RR):
+	 Deviation < 3-fold: 15 out of total 19 points.(78.95%)
+	 Deviation < 10-fold: 17 out of total 19 points.(89.47%)
+
+Midazolam fitted (RR):
+	 Deviation < 3-fold: 15 out of total 19 points.(78.95%)
+	 Deviation < 10-fold: 17 out of total 19 points.(89.47%)
+
+Midazolam fitted (RR):
+	 Deviation < 3-fold: 15 out of total 19 points.(78.95%)
+	 Deviation < 10-fold: 17 out of total 19 points.(89.47%)
+
+Midazolam fitted (RR):
+	 Deviation < 3-fold: 15 out of total 19 points.(78.95%)
+	 Deviation < 10-fold: 17 out of total 19 points.(89.47%)
+
+Midazolam fitted (RR):
+	 Deviation < 3-fold: 15 out of total 19 points.(78.95%)
+	 Deviation < 10-fold: 17 out of total 19 points.(89.47%)
+
+Midazolam fitted (RR):
+	 Deviation < 3-fold: 15 out of total 19 points.(78.95%)
+	 Deviation < 10-fold: 18 out of total 19 points.(94.74%)
+
