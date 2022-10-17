@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Population</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for Population {ospsuite}"><tr><td>Population {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Population</h2>
+
+<h3>Description</h3>
+
+<p>List of individuals used in a population simulation
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code>Population</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>count</code></dt><dd><p>the number of individual in the population</p>
+</dd>
+<dt><code>allCovariateNames</code></dt><dd><p>the names of all covariates defined in the population</p>
+</dd>
+<dt><code>allParameterPaths</code></dt><dd><p>the paths of all parameters defined in the population</p>
+</dd>
+<dt><code>allIndividualIds</code></dt><dd><p>Ids of individuals defined in the population</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-has"><code>Population$has()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setParameterValues"><code>Population$setParameterValues()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-getParameterValues"><code>Population$getParameterValues()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-getCovariateValues"><code>Population$getCovariateValues()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-getCovariateValue"><code>Population$getCovariateValue()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-getParameterValuesForIndividual"><code>Population$getParameterValuesForIndividual()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-remove"><code>Population$remove()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>Population$print()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="initialize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-initialize"><code>ospsuite::DotNetWrapper$initialize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-has"></a>
+
+
+
+<h4>Method <code>has()</code></h4>
+
+<p>Returns <code>TRUE</code> if the population has variability defined for <code>parameterOrPath</code> otherwise <code>FALSE</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$has(parameterOrPath)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>parameterOrPath</code></dt><dd><p>Parameter instance of parameter path</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setParameterValues"></a>
+
+
+
+<h4>Method <code>setParameterValues()</code></h4>
+
+<p>Updates or adds the variability values in the population for <code>parameterOrPath</code>.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$setParameterValues(parameterOrPath, values)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>parameterOrPath</code></dt><dd><p>Parameter instance of parameter path.
+If an entry already exists for this parameter by path, its values be overwritten, otherwise it will be created.</p>
+</dd>
+<dt><code>values</code></dt><dd><p>double vector containing the value to set for the <code>parameterOrPath</code></p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-getParameterValues"></a>
+
+
+
+<h4>Method <code>getParameterValues()</code></h4>
+
+<p>Returns the variability values defined in the population for <code>parameterOrPath</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$getParameterValues(parameterOrPath)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>parameterOrPath</code></dt><dd><p>Parameter instance of parameter path</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-getCovariateValues"></a>
+
+
+
+<h4>Method <code>getCovariateValues()</code></h4>
+
+<p>Returns the values defined in the population for the covariate named <code>covariateName</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$getCovariateValues(covariateName)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>covariateName</code></dt><dd><p>Name of covariate for which values should be retrieved</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-getCovariateValue"></a>
+
+
+
+<h4>Method <code>getCovariateValue()</code></h4>
+
+<p>Returns the values defined in the population for the covariate named <code>covariateName</code> and individual with id <code>individualId</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$getCovariateValue(covariateName, individualId)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>covariateName</code></dt><dd><p>Name of covariate for which values should be retrieved</p>
+</dd>
+<dt><code>individualId</code></dt><dd><p>Id of individual for which the value for covariate <code>covariateName</code> should be retrieved</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-getParameterValuesForIndividual"></a>
+
+
+
+<h4>Method <code>getParameterValuesForIndividual()</code></h4>
+
+<p>Returns all values defined in the population the individual with id <code>individualId</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$getParameterValuesForIndividual(individualId)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>individualId</code></dt><dd><p>Id of individual for which all values should be returned</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-remove"></a>
+
+
+
+<h4>Method <code>remove()</code></h4>
+
+<p>Removes the value of a parameter by path
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$remove(parameterPath)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>parameterPath</code></dt><dd><p>Path of the parameter values to remove</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Population$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

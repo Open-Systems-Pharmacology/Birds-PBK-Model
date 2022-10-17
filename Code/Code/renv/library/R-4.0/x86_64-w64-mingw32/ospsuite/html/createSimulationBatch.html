@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Creates and returns an instance of a 'SimulationBatch' that...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for createSimulationBatch {ospsuite}"><tr><td>createSimulationBatch {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Creates and returns an instance of a <code>SimulationBatch</code> that can be used to efficiently vary parameters and initial values in a simulation</h2>
+
+<h3>Description</h3>
+
+<p>Creates and returns an instance of a <code>SimulationBatch</code> that can be used to efficiently vary parameters and initial values in a simulation
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+createSimulationBatch(
+  simulation,
+  parametersOrPaths = NULL,
+  moleculesOrPaths = NULL
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>simulation</code></td>
+<td>
+<p>Instance of a <code>Simulation</code> to simulate in a batch mode</p>
+</td></tr>
+<tr valign="top"><td><code>parametersOrPaths</code></td>
+<td>
+<p>Parameter instances (element or vector) typically retrieved using
+<code>getAllParametersMatching</code> or parameter path (element or vector of strings) that will be varied in the simulation. (optional)
+When providing the paths, only absolute full paths are supported (i.e., no matching with '*' possible).
+If parametersOrPaths is <code>NULL</code>, you will not be able to set parameter values during batch run.</p>
+</td></tr>
+<tr valign="top"><td><code>moleculesOrPaths</code></td>
+<td>
+<p>Molecule instances (element or vector) typically retrieved using
+<code>getAllMoleculesMatching</code> or molecule path (element or vector of strings) that will be varied in the simulation. (optional)
+When providing the paths, only absolute full paths are supported (i.e., no matching with '*' possible).
+If moleculesOrPaths is <code>NULL</code>, you will not be able to set molecule initial values during batch run.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>SimulationBatch that can be used to vary parameter values or molecule initial values and run simulation in an optimized manner
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+
+# Create a simulation batch that will allow batch run for one parameter value
+simulationBatch &lt;- createSimulationBatch(sim, "Organism|Liver|Volume")
+
+# Create a simulation batch that will allow batch run for multiple parameter
+# values and initial values
+simulationBatch &lt;- createSimulationBatch(
+  sim,
+  c("Organism|Liver|Volume", "R1|k1"),
+  c("Organism|Liver|A")
+)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

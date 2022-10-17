@@ -1,0 +1,18 @@
+.set                    assign key-value pair(s) to a hash
+clear                   Removes all key-value pairs from a hash
+copy-methods            Create a seperate copy of a hash object.
+del                     Remove key-value pair(s) from a hash
+format,hash-method      Methods for Function format in Package 'hash'
+has.key                 Test for existence of key(s) on a hash
+hash                    hash/associative array/dictionary data
+                        structure for the R language
+hash-accessors          Accessor methods for the hash class.
+hash-class              Class "hash"
+hash-package            Hash/associative array/dictionary data
+                        structure for the R language.
+invert                  Create an inverted hash.
+is.empty                Test if a hash has no key-value pairs.
+keys                    Returns key(s) from a hash
+length                  Returns the number of items in a hash
+make.keys               creates/coerces objects to proper hash keys
+values                  Extract values of a hash object.

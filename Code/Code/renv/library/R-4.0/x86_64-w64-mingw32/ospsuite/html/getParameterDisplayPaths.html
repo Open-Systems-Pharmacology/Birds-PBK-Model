@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Retrieves the display path of the parameters defined by paths...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for getParameterDisplayPaths {ospsuite}"><tr><td>getParameterDisplayPaths {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Retrieves the display path of the parameters defined by paths in the simulation</h2>
+
+<h3>Description</h3>
+
+<p>Retrieves the display path of the parameters defined by paths in the simulation
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getParameterDisplayPaths(paths, simulation)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>paths</code></td>
+<td>
+<p>A single string or array of paths path relative to the <code>container</code></p>
+</td></tr>
+<tr valign="top"><td><code>simulation</code></td>
+<td>
+<p>A simulation used to find the entities</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>a display path for each parameter in paths
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+displayPath &lt;- getParameterDisplayPaths("Organism|Liver|Volume", sim)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

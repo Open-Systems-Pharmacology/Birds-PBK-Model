@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Loads a Common Language assembly.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for clrLoadAssembly {rClr}"><tr><td>clrLoadAssembly {rClr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Loads a Common Language assembly.</h2>
+
+<h3>Description</h3>
+
+<p>Loads an assembly. Note that this is loaded in the single application domain that is created by rClr, not a separate application domain.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+clrLoadAssembly(name)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>name</code></td>
+<td>
+<p>a character vector of length one. It can be the full file name of the assembly to load, or a fully qualified assembly name, or as a last resort a partial name.</p>
+</td></tr>
+</table>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../base/html/Foreign.html">.C</a></code> which this function wraps
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+library(rClr)
+clrGetLoadedAssemblies()
+f &lt;- file.path('SomeDirectory', 'YourDotNetBinaryFile.dll')
+f &lt;- path.expand(f)
+stopifnot( file.exists(f) )
+clrLoadAssembly(f)
+# Load an assembly from the global assembly cache (GAC)
+clrLoadAssembly("System.Windows.Presentation, 
+  Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")
+# The use of partial assembly names is discouraged; nevertheless it is supported
+clrLoadAssembly("System.Web.Services")
+clrGetLoadedAssemblies()
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>rClr</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

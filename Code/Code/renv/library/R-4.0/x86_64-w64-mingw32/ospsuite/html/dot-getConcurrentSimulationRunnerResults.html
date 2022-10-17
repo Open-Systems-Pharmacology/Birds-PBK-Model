@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Get SimulationResults from ConcurrentSimulationRunner</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for .getConcurrentSimulationRunnerResults {ospsuite}"><tr><td>.getConcurrentSimulationRunnerResults {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Get SimulationResults from ConcurrentSimulationRunner</h2>
+
+<h3>Description</h3>
+
+<p>Get SimulationResults from ConcurrentSimulationRunner
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+.getConcurrentSimulationRunnerResults(
+  results,
+  resultsIdSimulationIdMap,
+  simulationIdSimulationMap,
+  silentMode
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>results</code></td>
+<td>
+<p>.NET object created by <code>RunConcurrently()</code></p>
+</td></tr>
+<tr valign="top"><td><code>resultsIdSimulationIdMap</code></td>
+<td>
+<p>Map of results ids as keys with values being the ids of simulations the respective batch was created with. The order of IDs is as they were added to the batch.</p>
+</td></tr>
+<tr valign="top"><td><code>simulationIdSimulationMap</code></td>
+<td>
+<p>A named list of simulation ids as keys and simulation objects as values
+to the id of a result</p>
+</td></tr>
+<tr valign="top"><td><code>silentMode</code></td>
+<td>
+<p>If <code>TRUE</code>, no warnings are displayed if a simulation fails.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Create a list of <code>SimulationResults</code>-objects from the results of a
+<code>ConcurrentSimulationRunner</code>
+</p>
+
+
+<h3>Value</h3>
+
+<p>A named list of <code>SimulationResults</code> objects with the names being the ids of simulations or
+simulation-batch values pairs they were produced by
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

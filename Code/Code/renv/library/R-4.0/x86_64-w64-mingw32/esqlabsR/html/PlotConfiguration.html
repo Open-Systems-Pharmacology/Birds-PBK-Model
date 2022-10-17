@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: PlotConfiguration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for PlotConfiguration {esqlabsR}"><tr><td>PlotConfiguration {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>PlotConfiguration</h2>
+
+<h3>Description</h3>
+
+<p>An object storing configuration of a plot
+</p>
+
+
+<h3>Super class</h3>
+
+<p><code><a href="../../ospsuite/help/Printable.html">ospsuite::Printable</a></code> -&gt; <code>PlotConfiguration</code>
+</p>
+
+
+<h3>Public fields</h3>
+
+<div class="r6-fields">
+
+<dl>
+<dt><code>outputDevice</code></dt><dd><p>Output target of the plot. If NULL (default), the figure is created in the default &quot;plot&quot;
+output. Other values indicate output into a file. A list of supported outputs is provided in <code>GraphicsDevices</code>-enum.</p>
+</dd>
+<dt><code>outputName</code></dt><dd><p>A string used as the name of the .png file and as the title of the plot</p>
+</dd>
+<dt><code>outputFolder</code></dt><dd><p>Path to the directory where the outputs should be stored.</p>
+</dd>
+<dt><code>width</code></dt><dd><p>Width of the resulting plot in cm. If NULL (default), the width is automatically calculated
+using the value esqlabsEnv$widthPerPlotMapping</p>
+</dd>
+<dt><code>height</code></dt><dd><p>Height of the resulting plot in cm. If <code>NULL</code> (default), the
+height is automatically calculated
+using the value esqlabsEnv$heightPerPlotMapping</p>
+</dd>
+<dt><code>nrOfCols</code></dt><dd><p>Number of column in a multi-panel plot. If <code>NULL</code>
+(default), the number is calculated automatically to fit all panels
+while trying to keep the number of columns and rows equal. If <code>nrOfCols</code>
+is specified, the number of rows calculated to fit all the panels.</p>
+</dd>
+<dt><code>res</code></dt><dd><p>Resolution of the .png output in dpi. Default is 600.</p>
+</dd>
+<dt><code>pointsize</code></dt><dd><p>Size of the plotted text. Default is 8.</p>
+</dd>
+<dt><code>addTitle</code></dt><dd><p>Boolean flag if the title should be added. If TRUE,
+<code>outputName</code> is added a title.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>PlotConfiguration$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>PlotConfiguration$print()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+
+</details>
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>PlotConfiguration$new()</pre></div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>PlotConfiguration</code> object.
+</p>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>PlotConfiguration$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

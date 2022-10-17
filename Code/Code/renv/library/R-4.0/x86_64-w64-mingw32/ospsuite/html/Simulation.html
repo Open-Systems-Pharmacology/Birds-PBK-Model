@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Simulation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for Simulation {ospsuite}"><tr><td>Simulation {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Simulation</h2>
+
+<h3>Description</h3>
+
+<p>An OSPSuite simulation
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code><a href="../help/ObjectBase.html">ospsuite::ObjectBase</a></code> -&gt; <code>Simulation</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>root</code></dt><dd><p>Root container of the simulation (read-only)</p>
+</dd>
+<dt><code>path</code></dt><dd><p>Path of the root container of the simulation (read-only)</p>
+</dd>
+<dt><code>solver</code></dt><dd><p>SimulationSolver object for the simulation (read-only)</p>
+</dd>
+<dt><code>outputSchema</code></dt><dd><p>outputSchema object for the simulation (read-only)</p>
+</dd>
+<dt><code>outputSelections</code></dt><dd><p>outputSelections object for the simulation (read-only)</p>
+</dd>
+<dt><code>sourceFile</code></dt><dd><p>Path to the file the simulation was loaded from (read-only)</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>Simulation$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-allEndogenousStationaryMoleculeNames"><code>Simulation$allEndogenousStationaryMoleculeNames()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-allXenobioticFloatingMoleculeNames"><code>Simulation$allXenobioticFloatingMoleculeNames()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-allStationaryMoleculeNames"><code>Simulation$allStationaryMoleculeNames()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-allFloatingMoleculeNames"><code>Simulation$allFloatingMoleculeNames()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-molWeightFor"><code>Simulation$molWeightFor()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-allApplicationsFor"><code>Simulation$allApplicationsFor()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>Simulation$print()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$new(ref, sourceFile = NULL)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>ref</code></dt><dd><p>Reference to .NET simulation object</p>
+</dd>
+<dt><code>sourceFile</code></dt><dd><p>(Optional) File used to load the simulation</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>Simulation</code> object.
+</p>
+
+
+<hr>
+<a id="method-allEndogenousStationaryMoleculeNames"></a>
+
+
+
+<h4>Method <code>allEndogenousStationaryMoleculeNames()</code></h4>
+
+<p>Returns the name of all endogenous stationary molecules defined in the simulation. (e.g. with the flag IsStationary = TRUE)
+This is a typically a molecule that is individual specific such as en Enzyme, Protein, Transporter, FcRn etc.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$allEndogenousStationaryMoleculeNames()</pre></div>
+
+
+<hr>
+<a id="method-allXenobioticFloatingMoleculeNames"></a>
+
+
+
+<h4>Method <code>allXenobioticFloatingMoleculeNames()</code></h4>
+
+<p>Returns the name of all xenobiotoc floating molecules defined in the simulation. (e.g. with the flag IsStationary = FALSE)
+This is typically a molecule that is being explicitly simulated such as Compound, Inhibitor, DrugComplex.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$allXenobioticFloatingMoleculeNames()</pre></div>
+
+
+<hr>
+<a id="method-allStationaryMoleculeNames"></a>
+
+
+
+<h4>Method <code>allStationaryMoleculeNames()</code></h4>
+
+<p>Returns the name of all stationary molecules defined in the simulation. (e.g. with the flag IsStationary = TRUE)
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$allStationaryMoleculeNames()</pre></div>
+
+
+<hr>
+<a id="method-allFloatingMoleculeNames"></a>
+
+
+
+<h4>Method <code>allFloatingMoleculeNames()</code></h4>
+
+<p>Returns the name of all floating molecules defined in the simulation. (e.g. with the flag IsStationary = FALSE)
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$allFloatingMoleculeNames()</pre></div>
+
+
+<hr>
+<a id="method-molWeightFor"></a>
+
+
+
+<h4>Method <code>molWeightFor()</code></h4>
+
+<p>Returns the mol weight value (in core unit) associated to the quantity with given path or NA if not found
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$molWeightFor(quantityPath)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>quantityPath</code></dt><dd><p>Path of quantity used to retrieve the molecular weight</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-allApplicationsFor"></a>
+
+
+
+<h4>Method <code>allApplicationsFor()</code></h4>
+
+<p>Returns the applications ordered by start time associated to the quantity with path <code>quantityPath</code> or an empty list if not found
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$allApplicationsFor(quantityPath)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>quantityPath</code></dt><dd><p>Path of quantity used to retrieve the applications (e.g. applications resulting in this quantity being applied)</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Simulation$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

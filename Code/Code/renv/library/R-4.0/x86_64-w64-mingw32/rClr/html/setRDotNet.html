@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Turn on/off R.NET</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for setRDotNet {rClr}"><tr><td>setRDotNet {rClr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Turn on/off R.NET</h2>
+
+<h3>Description</h3>
+
+<p>Turn on or off the usage of the R.NET assemblies to convert CLR objects to R data structures. As of version 0.7.0, R.NET is the preferred way to convert data and is enabled by default.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+setRDotNet(setit = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>setit</code></td>
+<td>
+<p>if true enable, otherwise disable</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+library(rClr)
+## R.NET is currently used to convert complicated CLR types to sensible R equivalents
+setRDotNet()
+cTypename &lt;- "Rclr.TestCases"
+clrCallStatic(cTypename, "CreateStringDictionary")
+setRDotNet(FALSE)
+clrCallStatic(cTypename, "CreateStringDictionary")
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>rClr</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Creates an individual using the PKSim Database.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for createIndividualCharacteristics {ospsuite}"><tr><td>createIndividualCharacteristics {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Creates an individual using the PKSim Database.</h2>
+
+<h3>Description</h3>
+
+<p>Creates an individual using the PKSim Database.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+createIndividualCharacteristics(
+  species,
+  population = NULL,
+  gender = NULL,
+  weight = NULL,
+  weightUnit = "kg",
+  height = NULL,
+  heightUnit = "cm",
+  age = NULL,
+  ageUnit = "year(s)",
+  gestationalAge = 40,
+  gestationalAgeUnit = "week(s)",
+  moleculeOntogenies = NULL,
+  seed = NULL
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>species</code></td>
+<td>
+<p>Species of the individual as defined in PK-Sim (see Species enum)</p>
+</td></tr>
+<tr valign="top"><td><code>population</code></td>
+<td>
+<p>Population to use to create the individual. This is required only when the species is Human. (See HumanPopulation enum)</p>
+</td></tr>
+<tr valign="top"><td><code>gender</code></td>
+<td>
+<p>Gender to use to create the individual. (See Gender enum)</p>
+</td></tr>
+<tr valign="top"><td><code>weight</code></td>
+<td>
+<p>Weight of the created individual</p>
+</td></tr>
+<tr valign="top"><td><code>weightUnit</code></td>
+<td>
+<p>Unit in which the weight value is defined. Default is kg</p>
+</td></tr>
+<tr valign="top"><td><code>height</code></td>
+<td>
+<p>Height of the created individual (for human species only)</p>
+</td></tr>
+<tr valign="top"><td><code>heightUnit</code></td>
+<td>
+<p>Unit in which the height value is defined. Default is cm</p>
+</td></tr>
+<tr valign="top"><td><code>age</code></td>
+<td>
+<p>Age of the created individual (for human species only)</p>
+</td></tr>
+<tr valign="top"><td><code>ageUnit</code></td>
+<td>
+<p>Unit in which the age value is defined. Default is year(s)</p>
+</td></tr>
+<tr valign="top"><td><code>gestationalAge</code></td>
+<td>
+<p>Gestational age of the created individual (for human species only using the Preterm population). Default is 40 Weeks</p>
+</td></tr>
+<tr valign="top"><td><code>gestationalAgeUnit</code></td>
+<td>
+<p>Unit in which the gestational age value is defined. Default is week(s)</p>
+</td></tr>
+<tr valign="top"><td><code>moleculeOntogenies</code></td>
+<td>
+<p>Optional list of <code>MoleculeOntogeny</code> that will be used to retrieve ontogeny information for molecules.</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+<p>Optional seed parameter to use to generate start values for the created individual algorithm.
+A <code>MoleculeOntogeny</code> is an object with the name a <code>molecule</code> property (e.g the name of the molecule as defined in your simulation)
+and an <code>ontogeny</code> property (e.g. the name of the predefined ontogeny to use for this molecule). The list of all available ontogenies
+can be accessed programmatically using the enum <code>StandardOntogeny</code></p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>An array of <code>ParameterValue</code> containing the value of each individual parameter
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

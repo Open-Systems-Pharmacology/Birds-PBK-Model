@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: SimulationPKAnalyses</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for SimulationPKAnalyses {ospsuite}"><tr><td>SimulationPKAnalyses {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>SimulationPKAnalyses</h2>
+
+<h3>Description</h3>
+
+<p>pK-Analyses of a simulation (either individual or population simulation).
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code>SimulationPKAnalyses</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>simulation</code></dt><dd><p>Reference to the <code>Simulation</code> used to calculate or import the PK-Analyses (Read-Only)</p>
+</dd>
+<dt><code>allPKParameterNames</code></dt><dd><p>Returns the name of all pk parameters for which a value is available</p>
+</dd>
+<dt><code>allQuantityPaths</code></dt><dd><p>Returns the path of all quantities for which pk parameters were calculated</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>SimulationPKAnalyses$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-allPKParametersFor"><code>SimulationPKAnalyses$allPKParametersFor()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-pKParameterFor"><code>SimulationPKAnalyses$pKParameterFor()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>SimulationPKAnalyses$print()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationPKAnalyses$new(ref, simulation)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>ref</code></dt><dd><p>.NET reference</p>
+</dd>
+<dt><code>simulation</code></dt><dd><p>Simulation for which the pkParameters were calculated</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>SimulationPKAnalyses</code> object.
+</p>
+
+
+<hr>
+<a id="method-allPKParametersFor"></a>
+
+
+
+<h4>Method <code>allPKParametersFor()</code></h4>
+
+<p>Returns all QuantityPKParameter defined for a given path
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationPKAnalyses$allPKParametersFor(quantityPath)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>quantityPath</code></dt><dd><p>Path for which pkParameters should be retrieved</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-pKParameterFor"></a>
+
+
+
+<h4>Method <code>pKParameterFor()</code></h4>
+
+<p>The pK Parameter defined for the given path and name
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationPKAnalyses$pKParameterFor(quantityPath, pkParameter)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>quantityPath</code></dt><dd><p>Path for which the pkParameter named <code>pkParameter</code> should be retrieved</p>
+</dd>
+<dt><code>pkParameter</code></dt><dd><p>Name of the pkParameter to retrieve</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationPKAnalyses$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Saves the population to csv file</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for exportPopulationToCSV {ospsuite}"><tr><td>exportPopulationToCSV {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Saves the population to csv file</h2>
+
+<h3>Description</h3>
+
+<p>Saves the population to csv file
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+exportPopulationToCSV(population, filePath)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>population</code></td>
+<td>
+<p>Population to export to csv (typically imported from file using <code>loadPopulation</code>)</p>
+</td></tr>
+<tr valign="top"><td><code>filePath</code></td>
+<td>
+<p>Full path where the population will be saved.</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+csvPath &lt;- system.file("extdata", "pop.csv", package = "ospsuite")
+
+# Load the population
+population &lt;- loadPopulation(csvPath)
+
+# Exports the population
+exportPopulationToCSV(population, tempfile())
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Add a new key-value pairs to an enum.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for enumPut {ospsuite}"><tr><td>enumPut {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Add a new key-value pairs to an enum.</h2>
+
+<h3>Description</h3>
+
+<p>Add a new key-value pairs to an enum.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+enumPut(keys, values, enum, overwrite = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>keys</code></td>
+<td>
+<p>Keys of the values to be added</p>
+</td></tr>
+<tr valign="top"><td><code>values</code></td>
+<td>
+<p>Values to be added</p>
+</td></tr>
+<tr valign="top"><td><code>enum</code></td>
+<td>
+<p>enum the key-value pairs should be added to.
+WARNING: the original object is not modified!</p>
+</td></tr>
+<tr valign="top"><td><code>overwrite</code></td>
+<td>
+<p>if TRUE and a value with any of the given <code>keys</code> exists,
+it will be overwritten with the new value. Otherwise, an error is thrown. Default is FALSE.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Enum with added key-value pair.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+myEnum &lt;- enum(c(a = "b"))
+myEnum &lt;- enumPut("c", "d", myEnum)
+myEnum &lt;- enumPut(c("c", "d", "g"), c(12, 2, "a"), myEnum, overwrite = TRUE)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

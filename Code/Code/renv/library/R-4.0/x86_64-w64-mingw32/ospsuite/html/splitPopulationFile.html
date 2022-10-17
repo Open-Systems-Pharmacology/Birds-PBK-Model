@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Loads a population from the 'csvPopulationFile' and split the...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for splitPopulationFile {ospsuite}"><tr><td>splitPopulationFile {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Loads a population from the <code>csvPopulationFile</code> and split the loaded population according to
+<code>numberOfCores</code>.</h2>
+
+<h3>Description</h3>
+
+<p>Loads a population from the <code>csvPopulationFile</code> and split the loaded population according to
+<code>numberOfCores</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+splitPopulationFile(
+  csvPopulationFile,
+  numberOfCores,
+  outputFolder,
+  outputFileName
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>csvPopulationFile</code></td>
+<td>
+<p>Full path of csv population file to split.</p>
+</td></tr>
+<tr valign="top"><td><code>numberOfCores</code></td>
+<td>
+<p>Number of cores used for parallelization computing. The population will be split across all cores.</p>
+</td></tr>
+<tr valign="top"><td><code>outputFolder</code></td>
+<td>
+<p>Folder where all split files will be created</p>
+</td></tr>
+<tr valign="top"><td><code>outputFileName</code></td>
+<td>
+<p>File names will be constructed using this parameter concatenated with the core index.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A string vector containing the full path of the population files created. Note that there might be less files than cores
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+csvPath &lt;- system.file("extdata", "pop.csv", package = "ospsuite")
+
+# Split the population in up to 3 files, saved in the temp folder
+splitFiles &lt;- splitPopulationFile(csvPath, 3, tempdir(), "PopFile")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

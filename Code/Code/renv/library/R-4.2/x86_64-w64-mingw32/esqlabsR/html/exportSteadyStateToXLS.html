@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Export steady-state to excel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for exportSteadyStateToXLS {esqlabsR}"><tr><td>exportSteadyStateToXLS {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Export steady-state to excel</h2>
+
+<h3>Description</h3>
+
+<p>Export steady-state to excel
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+exportSteadyStateToXLS(
+  simulation,
+  quantitiesPaths = NULL,
+  resultsXLSPath = "",
+  steadyStateTime = 1000,
+  ignoreIfFormula = TRUE,
+  stopIfNotFound = TRUE,
+  lowerThreshold = 1e-15
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>simulation</code></td>
+<td>
+<p><code>Simulation</code> object</p>
+</td></tr>
+<tr valign="top"><td><code>quantitiesPaths</code></td>
+<td>
+<p>List of quantity paths (molecules and/or parameters)
+for which the steady-state is to be simulated. If <code>NULL</code> (default), all
+molecules and state variable parameters are considered.</p>
+</td></tr>
+<tr valign="top"><td><code>resultsXLSPath</code></td>
+<td>
+<p>Path to the xls-file where the results will be written
+to. If the file does not exist, a new file is created. If no path is
+provided, the file will be created in the same directory where the model
+file is located.</p>
+</td></tr>
+<tr valign="top"><td><code>steadyStateTime</code></td>
+<td>
+<p>Simulation time (minutes). Must be long enough for
+system to reach a steady-state. 1000 by default</p>
+</td></tr>
+<tr valign="top"><td><code>ignoreIfFormula</code></td>
+<td>
+<p>If <code>TRUE</code> (default), species and parameters with
+initial values defined by a formula are not included.</p>
+</td></tr>
+<tr valign="top"><td><code>stopIfNotFound</code></td>
+<td>
+<p>Boolean. If <code>TRUE</code> (default), an error is thrown when
+results for certain species were not generated. This may happen when due to
+numerical problems some values cannot be calculated, though the whole
+simulation converges. Setting this argument to <code>FALSE</code> allows to ignore
+such errors. Check the outputs for empty values when using this option.</p>
+</td></tr>
+<tr valign="top"><td><code>lowerThreshold</code></td>
+<td>
+<p>Numerical value (in µmol). Any steady-state values
+below this value are considered as numerical noise and replaced by 0. If
+<code>lowerThreshold</code> is <code>NULL</code>, no cut-off is applied. Default value is 1e-15.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Simulates a given model to its steady-state and creates an
+Excel-file with the end values of molecules amounts in all containers and
+parameter values that have a right-hand-side (state variable parameters).
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

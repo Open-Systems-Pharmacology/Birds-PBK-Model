@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Loads data (typically observed data) from a PKML file and...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for loadDataSetFromPKML {ospsuite}"><tr><td>loadDataSetFromPKML {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Loads data (typically observed data) from a PKML file and creates a <code>DataSet</code> from it.
+The pkml files are typically exported from PK-Sim or MoBi.</h2>
+
+<h3>Description</h3>
+
+<p>Loads data (typically observed data) from a PKML file and creates a <code>DataSet</code> from it.
+The pkml files are typically exported from PK-Sim or MoBi.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+loadDataSetFromPKML(filePath)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>filePath</code></td>
+<td>
+<p>Full path of pkml file containing the observed data to load</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+filePath &lt;- system.file("extdata", "obs_data.pkml", package = "ospsuite")
+
+obsData &lt;- loadDataSetFromPKML(filePath)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

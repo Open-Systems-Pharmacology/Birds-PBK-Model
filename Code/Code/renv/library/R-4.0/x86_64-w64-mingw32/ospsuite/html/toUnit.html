@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Converts a value given in base unit of a quantity into a...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for toUnit {ospsuite}"><tr><td>toUnit {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Converts a value given in base unit of a quantity into a target unit</h2>
+
+<h3>Description</h3>
+
+<p>Converts a value given in base unit of a quantity into a target unit
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+toUnit(
+  quantityOrDimension,
+  values,
+  targetUnit,
+  molWeight = NULL,
+  sourceUnit = NULL,
+  molWeightUnit = NULL
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>quantityOrDimension</code></td>
+<td>
+<p>Instance of a quantity from which the dimension will be retrieved or name of dimension</p>
+</td></tr>
+<tr valign="top"><td><code>values</code></td>
+<td>
+<p>Values to convert (single or vector). If <code>sourceUnit</code> is not specified, <code>values</code> are in the base unit of the dimension</p>
+</td></tr>
+<tr valign="top"><td><code>targetUnit</code></td>
+<td>
+<p>Unit to convert to</p>
+</td></tr>
+<tr valign="top"><td><code>molWeight</code></td>
+<td>
+<p>Optional molecular weight to use when converting, for example,  from molar to mass amount or concentration. If <code>molWeightUnit</code> is not specified, <code>molWeight</code> is assumed to be in kg/µmol</p>
+</td></tr>
+<tr valign="top"><td><code>sourceUnit</code></td>
+<td>
+<p>Optional Name of the unit to convert from. If <code>NULL</code> (default), the values are assumed to be in base unit.</p>
+</td></tr>
+<tr valign="top"><td><code>molWeightUnit</code></td>
+<td>
+<p>Optional Unit of the molecular weight value. If <code>NULL</code> (default), kg/µmol is assumed.</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+par &lt;- getParameter("Organism|Liver|Volume", sim)
+
+# Converts the value in base unit (1L) to ml =&gt; 1000
+valueInMl &lt;- toUnit(par, 1, "ml")
+
+valuesInMl &lt;- toUnit(par, c(1, 5, 5), "ml")
+
+# Converts a numerical value in from mmol/l to mg/dl
+valuesInMgDl &lt;- toUnit(ospDimensions$`Concentration (molar)`, 5,
+  targetUnit = "mmol/l",
+  sourceUnit = "mg/dl", molWeight = 180, molWeightUnit = "g/mol"
+)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Apply an individual to the simulation. For human species,...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for applyIndividualParameters {esqlabsR}"><tr><td>applyIndividualParameters {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Apply an individual to the simulation.
+For human species, only parameters that do not override formulas are applied.
+For other species, all parameters returned by <code>createIndividual</code> are applied.</h2>
+
+<h3>Description</h3>
+
+<p>Apply an individual to the simulation.
+For human species, only parameters that do not override formulas are applied.
+For other species, all parameters returned by <code>createIndividual</code> are applied.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+applyIndividualParameters(individualCharacteristics, simulation)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>individualCharacteristics</code></td>
+<td>
+<p><code>IndividualCharacteristics</code> describing an individual. Optional</p>
+</td></tr>
+<tr valign="top"><td><code>simulation</code></td>
+<td>
+<p><code>Simulation</code> loaded form the PKML file</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+#'
+## Not run: 
+simulation &lt;- loadSimulation(filePath = modelPath)
+humanIndividualCharacteristics &lt;- createIndividualCharacteristics(
+  species = Species$Human, population = HumanPopulation$European_ICRP_2002,
+  gender = Gender$Male, weight = 70
+)
+applyIndividualParameters(humanIndividualCharacteristics, simulation)
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

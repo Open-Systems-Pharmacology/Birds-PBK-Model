@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Formula</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for Formula {ospsuite}"><tr><td>Formula {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Formula</h2>
+
+<h3>Description</h3>
+
+<p>A formula of the model (Typically related to a <code>Quantity</code> such as a parameter)
+</p>
+<p>A table formula of the model (Typically related to a <code>Quantity</code> such as a parameter)
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code><a href="../help/ObjectBase.html">ospsuite::ObjectBase</a></code> -&gt; <code>Formula</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>isTable</code></dt><dd><p>Is this a table formula (Read-Only)</p>
+</dd>
+<dt><code>isTableWithOffSet</code></dt><dd><p>Is this a table formula with Offset (Read-Only)</p>
+</dd>
+<dt><code>isTableWithXArgument</code></dt><dd><p>Is this a table formula with xArgs (typically time, or pH) (Read-Only)</p>
+</dd>
+<dt><code>isConstant</code></dt><dd><p>Is this a constant formula (Read-Only)</p>
+</dd>
+<dt><code>isExplicit</code></dt><dd><p>Is this an explicit formula (Read-Only)</p>
+</dd>
+<dt><code>isDistributed</code></dt><dd><p>Is this a distributed formula (Read-Only)</p>
+</dd>
+<dt><code>dimension</code></dt><dd><p>The dimension in which the quantity is defined  (Read-Only)</p>
+</dd>
+<dt><code>formulaString</code></dt><dd><p>Returns the formula as a string for an <code>ExplicitFormula</code> or <code>NULL</code> otherwise (Read-Only).</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-print"><code>Formula$print()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-printFormula"><code>Formula$printFormula()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="initialize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-initialize"><code>ospsuite::DotNetWrapper$initialize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Formula$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-printFormula"></a>
+
+
+
+<h4>Method <code>printFormula()</code></h4>
+
+<p>Print the formula to the console without the name of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Formula$printFormula()</pre></div>
+
+
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code><a href="../help/ObjectBase.html">ospsuite::ObjectBase</a></code> -&gt; <code><a href="../help/Formula.html">ospsuite::Formula</a></code> -&gt; <code>TableFormula</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>allPoints</code></dt><dd><p>Returns all points defined in the table formulafor a <code>TableFormula</code> or <code>NULL</code>  otherwise (Read-Only).</p>
+</dd>
+<dt><code>useDerivedValues</code></dt><dd><p>Indicates whether table values should be derived during solving. the ODE system. Default value is <code>TRUE</code></p>
+</dd>
+<dt><code>xDimension</code></dt><dd><p>The dimension in which the x values are defined (Read-Only).</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-addPoints"><code>TableFormula$addPoints()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-removePoint"><code>TableFormula$removePoint()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-clearPoints"><code>TableFormula$clearPoints()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setPoints"><code>TableFormula$setPoints()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>TableFormula$print()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-valueAt"><code>TableFormula$valueAt()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-printFormula"><code>TableFormula$printFormula()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="initialize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-initialize"><code>ospsuite::DotNetWrapper$initialize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-addPoints"></a>
+
+
+
+<h4>Method <code>addPoints()</code></h4>
+
+<p>Adds one or more points to a table
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$addPoints(xValues, yValues)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>xValues</code></dt><dd><p>x values (single value or array) in base unit for XDimension</p>
+</dd>
+<dt><code>yValues</code></dt><dd><p>y values (single value or array) in base unit for Dimension</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-removePoint"></a>
+
+
+
+<h4>Method <code>removePoint()</code></h4>
+
+<p>Remove the point having the same x and y from the table
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$removePoint(xValue, yValue)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>xValue</code></dt><dd><p>xValue value in base unit for XDimension</p>
+</dd>
+<dt><code>yValue</code></dt><dd><p>yValue value in base unit for Dimension</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-clearPoints"></a>
+
+
+
+<h4>Method <code>clearPoints()</code></h4>
+
+<p>Remove all points from the table
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$clearPoints()</pre></div>
+
+
+<hr>
+<a id="method-setPoints"></a>
+
+
+
+<h4>Method <code>setPoints()</code></h4>
+
+<p>Replace all points defined in the table with the new values given.
+This is a convenience method for calling <code>clearPoints</code> and <code>addPoints</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$setPoints(xValues, yValues)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>xValues</code></dt><dd><p>x values (single value or array) in base unit for XDimension</p>
+</dd>
+<dt><code>yValues</code></dt><dd><p>y values (single value or array) in base unit for Dimension</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-valueAt"></a>
+
+
+
+<h4>Method <code>valueAt()</code></h4>
+
+<p>Returns the y defined for the x value in base unit. If not exact match is found, value will be interpolated between two existing points
+If the table contains no point, 0 is returned
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$valueAt(xValue)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>xValue</code></dt><dd><p>x value for in base unit for which the yValue should be returned</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-printFormula"></a>
+
+
+
+<h4>Method <code>printFormula()</code></h4>
+
+<p>Print the formula to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>TableFormula$printFormula()</pre></div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

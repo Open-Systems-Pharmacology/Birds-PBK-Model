@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Read time-values data from excel file</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for readOSPSTimeValues {esqlabsR}"><tr><td>readOSPSTimeValues {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Read time-values data from excel file</h2>
+
+<h3>Description</h3>
+
+<p>Read time-values data from excel file
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+readOSPSTimeValues(dataConfiguration)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dataConfiguration</code></td>
+<td>
+<p>An object of <code>DataConfiguration</code></p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The methods reads time-values data from the properly defined excel
+sheet and creates <code>XYData</code> objects according to the groupings. Each sheet
+in <code>DataConfiguration$sheets</code> is split according to columns listed in
+<code>DataConfiguration$columnsToSplitBy</code>. The output structure is a nested list
+with levels corresponding to the groupings.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A (nested) list of <code>XYData</code> objects
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

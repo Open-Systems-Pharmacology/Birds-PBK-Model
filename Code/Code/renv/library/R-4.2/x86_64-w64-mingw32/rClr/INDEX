@@ -1,0 +1,68 @@
+clrCall                 Call a method on an object
+clrCallStatic           Call a static method on a CLR type
+clrCobj                 Create a reference object wrapper around a CLR
+                        object
+clrGet                  Gets the value of a field or property of an
+                        object or class
+clrGetConstructors      List the public constructors of a CLR Type
+clrGetEnumNames         Gets the names of a CLR Enum value type
+clrGetExtPtr            Gets the external pointer CLR object.
+clrGetFields            List the instance fields of a CLR object
+clrGetInnerPkgName      Gets the inner name used for the package
+clrGetLoadedAssemblies
+                        List the names of loaded CLR assemblies
+clrGetMemberSignature   Gets the signature of a CLI object member
+clrGetMethods           List the instance methods of a CLR object
+clrGetNativeLibName     Gets the name of the native library currently
+                        loaded.
+clrGetProperties        List the instance properties of a CLR object
+clrGetStaticFields      Gets the static fields for a type
+clrGetStaticMemberSignature
+                        Gets the signature of a static member of a type
+clrGetStaticMembers     Gets the static members for a type
+clrGetStaticMethods     Gets the static members for a type
+clrGetStaticProperties
+                        Gets the static members for a type
+clrGetType              Gets the type of a CLR object given its type
+                        name
+clrGetTypesInAssembly   Get a list of CLR type names exported by an
+                        assembly
+clrInit                 Initialize a new CLR application domain
+clrIs                   Check whether an object is of a certain type
+clrLoadAssembly         Loads a Common Language assembly.
+clrNew                  Create a new CLR object
+clrReflect              List the instance members of a CLR object
+clrSet                  Sets the value of a field or property of an
+                        object or class
+clrSetEnumProperty      Sets the value of an enum field or property of
+                        an object or class
+clrShutdown             Shuts down the current runtime.
+clrToString             Calls the ToString method of an object
+clrTraceback            Prints the last CLR exception
+clrTypeNameExtPtr       Gets the type name of an object
+clrTypename             Gets the type name of an object
+clrVT                   Get the COM variant type of a CLR object
+dotOnAttach             rClr .onAttach
+dotOnLoad               rClr .onLoad
+getClrVersionString     Gets the version of the common language runtime
+                        in use
+getCurrentConvertedObject
+                        System function to get a direct access to an
+                        object
+getNativeLibsPath       Architecture dependent path to the rClr native
+                        library
+getSexpType             Get the type code for a SEXP
+inspectArgs             Peek into the structure of R objects 'as seen
+                        from C code'
+mkClrObjRef             Create if possible an S4 CLR object.
+peekClrArgs             Peek into the types of CLR objects arguments
+                        are converted to by rClr
+rClr-package            R accessing .NET/Mono
+rToClrType              Gets the type of a CLR object resulting from
+                        converting an R object
+setClrRefClass          Create reference classes for an object
+                        hierarchy
+setConvertAdvancedTypes
+                        Turn on/off the conversion of advanced data
+                        types with R.NET
+setRDotNet              Turn on/off R.NET

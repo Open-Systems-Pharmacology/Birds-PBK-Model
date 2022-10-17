@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Set the values of parameters in the simulation by path</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for setParameterValuesByPath {ospsuite}"><tr><td>setParameterValuesByPath {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Set the values of parameters in the simulation by path</h2>
+
+<h3>Description</h3>
+
+<p>Set the values of parameters in the simulation by path
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+setParameterValuesByPath(
+  parameterPaths,
+  values,
+  simulation,
+  units = NULL,
+  stopIfNotFound = TRUE
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>parameterPaths</code></td>
+<td>
+<p>A single or a list of parameter path</p>
+</td></tr>
+<tr valign="top"><td><code>values</code></td>
+<td>
+<p>A numeric value that should be assigned to the parameters or a vector
+of numeric values, if the value of more than one parameter should be changed. Must have the same
+length as 'parameterPaths'</p>
+</td></tr>
+<tr valign="top"><td><code>simulation</code></td>
+<td>
+<p>Simulation uses to retrieve parameter instances from given paths.</p>
+</td></tr>
+<tr valign="top"><td><code>units</code></td>
+<td>
+<p>A string or a list of strings defining the units of the <code>values</code>. If <code>NULL</code> (default), values
+are assumed to be in base units. If not <code>NULL</code>, must have the same length as <code>quantityPaths</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>stopIfNotFound</code></td>
+<td>
+<p>Boolean. If <code>TRUE</code> (default) and no parameter exists for the given path,
+an error is thrown. If <code>FALSE</code>, a warning is shown to the user</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+setParameterValuesByPath("Organism|Liver|Volume", 1, sim)
+
+setParameterValuesByPath(c("Organism|Liver|Volume", "Organism|Volume"), c(2, 3), sim)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

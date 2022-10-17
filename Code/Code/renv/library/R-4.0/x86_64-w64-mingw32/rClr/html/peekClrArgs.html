@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Peek into the types of CLR objects arguments are converted to...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for peekClrArgs {rClr}"><tr><td>peekClrArgs {rClr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Peek into the types of CLR objects arguments are converted to by rClr</h2>
+
+<h3>Description</h3>
+
+<p>Advanced use only, to diagnose unexpected conditions in CLR method calls. Most users would not ever need it.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+peekClrArgs(...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>method arguments passed to .External</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>a character message with type information about each argument.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+library(rClr)
+peekClrArgs("a", numeric(0))
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>rClr</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Retrieves all entities of a container (simulation or...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for getAllEntitiesMatching {ospsuite}"><tr><td>getAllEntitiesMatching {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Retrieves all entities of a container (simulation or container instance) matching the given path criteria.</h2>
+
+<h3>Description</h3>
+
+<p>Retrieves all entities of a container (simulation or container instance) matching the given path criteria.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getAllEntitiesMatching(paths, container, entityType, method = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>paths</code></td>
+<td>
+<p>A vector of strings representing the paths relative to the <code>container</code></p>
+</td></tr>
+<tr valign="top"><td><code>container</code></td>
+<td>
+<p>A Container or Simulation used to find the entities</p>
+</td></tr>
+<tr valign="top"><td><code>entityType</code></td>
+<td>
+<p>Class of the type that should be returned.</p>
+</td></tr>
+<tr valign="top"><td><code>method</code></td>
+<td>
+<p>Method to call in the underlying .NET class. (optional). If unspecified, the method will be estimated from entity type</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A list of entities matching the path criteria coerced to the <code>entityType</code>.
+The list is empty if no entities matching were found.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../ospsuite/help/loadSimulation.html">loadSimulation()</a></code>, <code><a href="../../ospsuite/help/getContainer.html">getContainer()</a></code> and <code><a href="../../ospsuite/help/getAllContainersMatching.html">getAllContainersMatching()</a></code> to create objects of type Container or Simulation
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

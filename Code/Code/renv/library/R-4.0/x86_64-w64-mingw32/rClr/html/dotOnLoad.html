@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: rClr .onLoad</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for dotOnLoad {rClr}"><tr><td>dotOnLoad {rClr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>rClr .onLoad</h2>
+
+<h3>Description</h3>
+
+<p>Function called when loading the rClr package with 'library'.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+.onLoad(libname = "~/R", pkgname = "rClr")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>libname</code></td>
+<td>
+<p>the path to the library from which the package is loaded</p>
+</td></tr>
+<tr valign="top"><td><code>pkgname</code></td>
+<td>
+<p>the name of the package.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The function looks by default for the rClr native library for the Mono runtime. 
+If the platform is Linux, this is the only option. If the platform is Windows, using the 
+Microsoft .NET runtime is an option. If the rClr native library for MS.NET is detected, 
+the Microsoft .NET runtime is loaded in preference to Mono.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>rClr</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

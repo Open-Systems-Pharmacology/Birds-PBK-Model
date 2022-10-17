@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Retrieve a single quantity by path in the given container</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for getQuantity {ospsuite}"><tr><td>getQuantity {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Retrieve a single quantity by path in the given container</h2>
+
+<h3>Description</h3>
+
+<p>Retrieve a single quantity by path in the given container
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getQuantity(path, container, stopIfNotFound = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>path</code></td>
+<td>
+<p>A string representing the path relative to the <code>container</code></p>
+</td></tr>
+<tr valign="top"><td><code>container</code></td>
+<td>
+<p>A Container or Simulation used to find the parameters</p>
+</td></tr>
+<tr valign="top"><td><code>stopIfNotFound</code></td>
+<td>
+<p>Boolean. If <code>TRUE</code> (default) and no quantity exists for the given path,
+an error is thrown. If <code>FALSE</code>, <code>NULL</code> is returned.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>The <code>Quantity</code> with the given path. If the quantity for the path
+does not exist, an error is thrown if <code>stopIfNotFound</code> is <code>TRUE</code> (default),
+otherwise <code>NULL</code>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../ospsuite/help/loadSimulation.html">loadSimulation()</a></code>, <code><a href="../../ospsuite/help/getContainer.html">getContainer()</a></code> and <code><a href="../../ospsuite/help/getAllContainersMatching.html">getAllContainersMatching()</a></code> to retrieve objects of type Container or Simulation
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+quantity &lt;- getQuantity("Organism|Liver|Volume", sim)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

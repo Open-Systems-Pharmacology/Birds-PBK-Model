@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Returns the HSV values for a given R color name</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for col2hsv {esqlabsR}"><tr><td>col2hsv {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Returns the HSV values for a given R color name</h2>
+
+<h3>Description</h3>
+
+<p>Returns the HSV values for a given R color name
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+col2hsv(color)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>color</code></td>
+<td>
+<p>vector of any of the three kinds of R color specifications,
+i.e., either a color name (as listed by colors()), a hexadecimal string of
+the form &quot;#rrggbb&quot; or &quot;#rrggbbaa&quot; (see rgb), or a positive integer <code>i</code>
+meaning <code>palette()[i]</code>.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A matrix with a column for each color. The three rows of the matrix
+indicate hue, saturation and value and are named &quot;h&quot;, &quot;s&quot;, and &quot;v&quot;
+accordingly.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+col2hsv("yellow")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

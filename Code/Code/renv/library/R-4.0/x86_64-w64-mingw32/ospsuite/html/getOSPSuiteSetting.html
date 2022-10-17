@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Get the value of a global ospsuite-R setting.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for getOSPSuiteSetting {ospsuite}"><tr><td>getOSPSuiteSetting {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Get the value of a global ospsuite-R setting.</h2>
+
+<h3>Description</h3>
+
+<p>Get the value of a global ospsuite-R setting.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getOSPSuiteSetting(settingName)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>settingName</code></td>
+<td>
+<p>String name of the setting</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Value of the setting stored in ospsuiteEnv. If the setting does not exist, an error is thrown.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+getOSPSuiteSetting("suiteVersion")
+getOSPSuiteSetting("sensitivityAnalysisConfig")$totalSensitivityThreshold
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

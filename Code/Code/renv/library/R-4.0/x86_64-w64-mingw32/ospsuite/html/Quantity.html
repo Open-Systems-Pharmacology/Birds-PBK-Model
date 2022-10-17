@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Quantity</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for Quantity {ospsuite}"><tr><td>Quantity {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Quantity</h2>
+
+<h3>Description</h3>
+
+<p>A quantity of the model (with unit, value) such as a Parameter or an Amount
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code><a href="../help/ObjectBase.html">ospsuite::ObjectBase</a></code> -&gt; <code><a href="../help/Entity.html">ospsuite::Entity</a></code> -&gt; <code>Quantity</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>value</code></dt><dd><p>The value of the quantity in unit</p>
+</dd>
+<dt><code>unit</code></dt><dd><p>The base unit in which the quantity value is defined (Read-Only)</p>
+</dd>
+<dt><code>displayUnit</code></dt><dd><p>The unit in which the quantity value is usually displayed (Read-Only)</p>
+</dd>
+<dt><code>dimension</code></dt><dd><p>The dimension in which the quantity is defined  (Read-Only)</p>
+</dd>
+<dt><code>allUnits</code></dt><dd><p>the list of all supported units (Read-Only)</p>
+</dd>
+<dt><code>quantityType</code></dt><dd><p>The type of the quantity (Read-Only)</p>
+</dd>
+<dt><code>formula</code></dt><dd><p>An instance of a <code>Formula</code> object used by this quantity (Read-Only)</p>
+</dd>
+<dt><code>isTable</code></dt><dd><p>Returns <code>TRUE</code> if the formula used by this quantity is a table formula otherwise <code>FALSE</code></p>
+</dd>
+<dt><code>isConstant</code></dt><dd><p>Returns <code>TRUE</code> if the formula used by this quantity is a constant formula otherwise <code>FALSE</code></p>
+</dd>
+<dt><code>isFormula</code></dt><dd><p>Returns <code>TRUE</code> if the formula used by this quantity is an explicit formula (e.g an equation) otherwise <code>FALSE</code></p>
+</dd>
+<dt><code>isDistributed</code></dt><dd><p>Returns <code>TRUE</code> if the quantity represents a quantity with an underlying distribution otherwise <code>FALSE</code></p>
+</dd>
+<dt><code>formulaString</code></dt><dd><p>Returns the equation of the formula for a quantity using an explicit formula (e.g. <code>isFormula == TRUE</code>) or <code>NULL</code> for a quantity that does not use an explicit formula.</p>
+</dd>
+<dt><code>isFixedValue</code></dt><dd><p>Returns <code>TRUE</code> if the formula was overridden by a constant value, otherwise <code>FALSE</code></p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>Quantity$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>Quantity$print()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-printValue"><code>Quantity$printValue()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-printQuantityValue"><code>Quantity$printQuantityValue()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setValue"><code>Quantity$setValue()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-hasUnit"><code>Quantity$hasUnit()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-reset"><code>Quantity$reset()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$new(ref)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>ref</code></dt><dd><p>.NET Instance</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>Quantity</code> object.
+</p>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-printValue"></a>
+
+
+
+<h4>Method <code>printValue()</code></h4>
+
+<p>Print the name of the quantity and its value
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$printValue()</pre></div>
+
+
+<hr>
+<a id="method-printQuantityValue"></a>
+
+
+
+<h4>Method <code>printQuantityValue()</code></h4>
+
+<p>Print the the value and unit of the quantity
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$printQuantityValue(caption)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>caption</code></dt><dd><p>Text to prepend to the value</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setValue"></a>
+
+
+
+<h4>Method <code>setValue()</code></h4>
+
+<p>Convert value from unit to the base unit and sets the value in base unit.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$setValue(value, unit = NULL)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>value</code></dt><dd><p>Value to set. If unit is null, we assume that the value is in base unit</p>
+</dd>
+<dt><code>unit</code></dt><dd><p>Optional unit in which the value is given.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-hasUnit"></a>
+
+
+
+<h4>Method <code>hasUnit()</code></h4>
+
+<p>Returns <code>TRUE</code> if the quantity supports the given unit otherwise <code>FALSE</code>.
+For the list of supported units, use <code>allUnits</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$hasUnit(unit)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>unit</code></dt><dd><p>Unit to check</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-reset"></a>
+
+
+
+<h4>Method <code>reset()</code></h4>
+
+<p>Ensures that the quantity uses the value computed by its formula. It is a shortcut for <code>self$isFixedValue &lt;- false</code>.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>Quantity$reset()</pre></div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

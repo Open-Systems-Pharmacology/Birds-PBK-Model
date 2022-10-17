@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Turn on/off the conversion of advanced data types with R.NET</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for setConvertAdvancedTypes {rClr}"><tr><td>setConvertAdvancedTypes {rClr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Turn on/off the conversion of advanced data types with R.NET</h2>
+
+<h3>Description</h3>
+
+<p>Turn on/off the conversion of advanced data types with R.NET. This will turn off the conversion of classes such as dictionaries into R lists, 
+as these are not bidirectional and you may want to see and manipulate external pointers to dictionaries in some circumstances.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+setConvertAdvancedTypes(enable = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>enable</code></td>
+<td>
+<p>if true enable, otherwise disable</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+library(rClr)
+cTypename &lt;- "Rclr.TestCases"
+clrCallStatic(cTypename, "CreateStringDictionary")
+setConvertAdvancedTypes(FALSE)
+clrCallStatic(cTypename, "CreateStringDictionary")
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>rClr</em> version 0.9.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

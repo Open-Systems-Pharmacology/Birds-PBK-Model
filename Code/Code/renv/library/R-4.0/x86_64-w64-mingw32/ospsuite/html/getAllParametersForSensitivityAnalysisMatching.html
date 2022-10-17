@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Retrieve all parameters of the given simulation matching the...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for getAllParametersForSensitivityAnalysisMatching {ospsuite}"><tr><td>getAllParametersForSensitivityAnalysisMatching {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Retrieve all parameters of the given simulation matching the given path criteria and also potential candidate
+for sensitivity variation</h2>
+
+<h3>Description</h3>
+
+<p>Retrieve all parameters of the given simulation matching the given path criteria and also potential candidate
+for sensitivity variation
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+getAllParametersForSensitivityAnalysisMatching(paths, simulation)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>paths</code></td>
+<td>
+<p>A vector of strings representing the path of the parameters (potentially using wildcards)</p>
+</td></tr>
+<tr valign="top"><td><code>simulation</code></td>
+<td>
+<p>Simulation used to find the parameters</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A list of parameters matching the path criteria and also candidates for a sensitivity analysis.
+The list is empty if no parameters matching were found.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+
+# Return all `Volume` parameters defined in all direct containers of the organism
+params &lt;- getAllParametersForSensitivityAnalysisMatching("Organism|*|Volume", sim)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

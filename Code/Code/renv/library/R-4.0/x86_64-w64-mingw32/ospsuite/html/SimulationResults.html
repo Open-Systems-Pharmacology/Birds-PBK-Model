@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: SimulationResults</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for SimulationResults {ospsuite}"><tr><td>SimulationResults {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>SimulationResults</h2>
+
+<h3>Description</h3>
+
+<p>Results of a simulation run (either individual or population simulation)
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code>SimulationResults</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>count</code></dt><dd><p>the number of individual results (<code>Count==1</code> generally means that we are dealing with an individual simulation results).</p>
+</dd>
+<dt><code>simulation</code></dt><dd><p>Reference to the <code>Simulation</code> used to calculate or import the results (Read-Only).</p>
+</dd>
+<dt><code>timeValues</code></dt><dd><p>Vector of simulated time output values</p>
+</dd>
+<dt><code>allQuantityPaths</code></dt><dd><p>List of all paths for which results are defined.</p>
+</dd>
+<dt><code>allIndividualIds</code></dt><dd><p>List of Ids of all individuals that have been simulated</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>SimulationResults$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-hasResultsForIndividual"><code>SimulationResults$hasResultsForIndividual()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-getValuesByPath"><code>SimulationResults$getValuesByPath()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-resultsForIndividual"><code>SimulationResults$resultsForIndividual()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>SimulationResults$print()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationResults$new(ref, simulation)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>ref</code></dt><dd><p>.NET Instance</p>
+</dd>
+<dt><code>simulation</code></dt><dd><p>Reference to the simulation object used to calculated the results</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>SimulationResults</code> object.
+</p>
+
+
+<hr>
+<a id="method-hasResultsForIndividual"></a>
+
+
+
+<h4>Method <code>hasResultsForIndividual()</code></h4>
+
+<p>Returns <code>TRUE</code> if results are available for the individual with id <code>individualId</code> otherwise <code>FALSE</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationResults$hasResultsForIndividual(individualId)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>individualId</code></dt><dd><p>Id of the individual</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-getValuesByPath"></a>
+
+
+
+<h4>Method <code>getValuesByPath()</code></h4>
+
+<p>Returns <code>TRUE</code> if results are available for the individual with id <code>individualId</code> otherwise <code>FALSE</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationResults$getValuesByPath(path, individualIds, stopIfNotFound = TRUE)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>path</code></dt><dd><p>Path for which values should be retrieved</p>
+</dd>
+<dt><code>individualIds</code></dt><dd><p>One or more individual ids for which values should be returned</p>
+</dd>
+<dt><code>stopIfNotFound</code></dt><dd><p>If <code>TRUE</code> (default) an error is thrown if no values could be found for the <code>path</code>/
+If <code>FALSE</code>, a list of <code>NA</code> values is returned</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-resultsForIndividual"></a>
+
+
+
+<h4>Method <code>resultsForIndividual()</code></h4>
+
+<p>Returns all available results for the individual with id <code>individualId</code>
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationResults$resultsForIndividual(individualId)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>individualId</code></dt><dd><p>Id for which the results should be returned</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>SimulationResults$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

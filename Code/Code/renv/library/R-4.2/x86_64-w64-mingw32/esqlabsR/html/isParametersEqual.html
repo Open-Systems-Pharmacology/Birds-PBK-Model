@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Check if two parameters are equal is respect to certain...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for isParametersEqual {esqlabsR}"><tr><td>isParametersEqual {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Check if two parameters are equal is respect to certain properties. The parameters are not equal if:
+The paths of the parameters are not equal;
+The types of the formulas differ (types checked: isConstant, isDistributed, isExplicit, isTable);
+Constant formulas have different values;
+Distributed formulas have different values (not checking for distribution)
+Explicit formulas: If formula string are not equal, OR one of the parameter values is fixed (formula is overridden),
+OR both parameter values are fixed and differ,
+OR checkFormulaValues is TRUE and the values differ (disregarding of overridden or not)
+Table formulas: If the number of points differ, OR any of the points differ,
+OR one of the parameter values is fixed (formula is overridden),
+OR both parameter values are fixed and differ
+#'</h2>
+
+<h3>Description</h3>
+
+<p>Check if two parameters are equal is respect to certain properties. The parameters are not equal if:
+The paths of the parameters are not equal;
+The types of the formulas differ (types checked: isConstant, isDistributed, isExplicit, isTable);
+Constant formulas have different values;
+Distributed formulas have different values (not checking for distribution)
+Explicit formulas: If formula string are not equal, OR one of the parameter values is fixed (formula is overridden),
+OR both parameter values are fixed and differ,
+OR checkFormulaValues is TRUE and the values differ (disregarding of overridden or not)
+Table formulas: If the number of points differ, OR any of the points differ,
+OR one of the parameter values is fixed (formula is overridden),
+OR both parameter values are fixed and differ
+#'
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+isParametersEqual(parameter1, parameter2, checkFormulaValues = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>parameter1</code></td>
+<td>
+<p>First parameter to compare</p>
+</td></tr>
+<tr valign="top"><td><code>parameter2</code></td>
+<td>
+<p>Second parameter to compare</p>
+</td></tr>
+<tr valign="top"><td><code>checkFormulaValues</code></td>
+<td>
+<p>If TRUE, values of explicit formulas are always
+compared. Otherwise, the values are only compared if the formulas are
+overridden (isFixedValue == TRUE). FALSE by default.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>TRUE</code> if parameters are considered equal, <code>FALSE</code> otherwise
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

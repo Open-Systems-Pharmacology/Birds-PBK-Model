@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Add legend to a plot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for .figureAddLegend {esqlabsR}"><tr><td>.figureAddLegend {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Add legend to a plot</h2>
+
+<h3>Description</h3>
+
+<p>Add legend to a plot
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+.figureAddLegend(x, legend, col, pch, lty, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>the x and y co-ordinates to be used to position the legend.
+They can be specified by keyword or in any way which is accepted by
+<code><a href="../../grDevices/html/xy.coords.html">xy.coords</a></code>: See &lsquo;Details&rsquo;.</p>
+</td></tr>
+<tr valign="top"><td><code>legend</code></td>
+<td>
+<p>a character or <a href="../../base/html/expression.html">expression</a> vector
+of length <i>&ge; 1</i> to appear in the legend.  Other
+objects will be coerced by <code><a href="../../grDevices/html/as.graphicsAnnot.html">as.graphicsAnnot</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>col</code></td>
+<td>
+<p>the color of points or lines appearing in the legend.</p>
+</td></tr>
+<tr valign="top"><td><code>pch</code></td>
+<td>
+<p>the plotting symbols appearing in the legend, as
+numeric vector or a vector of 1-character strings (see
+<code><a href="../../graphics/help/points.html">points</a></code>). Unlike <code>points</code>, this can all be
+specified as a single multi-character string.  <em>Must</em> be
+specified for symbol drawing.</p>
+</td></tr>
+<tr valign="top"><td><code>lty</code></td>
+<td>
+<p>the line types and widths for lines appearing in the
+legend.  One of these two <em>must</em> be specified for line drawing.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>Additional arguments to be passed to <code>graphics::legend</code>.</p>
+</td></tr>
+</table>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

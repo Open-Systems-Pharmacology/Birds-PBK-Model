@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Extract Unique Elements of type 'Entity'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for uniqueEntities {ospsuite}"><tr><td>uniqueEntities {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Extract Unique Elements of type 'Entity'</h2>
+
+<h3>Description</h3>
+
+<p>Extract Unique Elements of type 'Entity'
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+uniqueEntities(entities, compareBy = CompareBy$id)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>entities</code></td>
+<td>
+<p>List of objects of type 'Entity'</p>
+</td></tr>
+<tr valign="top"><td><code>compareBy</code></td>
+<td>
+<p>A string defining the property that is compared by.
+Can take values 'id', 'name', and 'path'. Default is 'id'.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>List of entities that are unique for the property defined by the
+argument 'compareBy'
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+simPath &lt;- system.file("extdata", "simple.pkml", package = "ospsuite")
+sim &lt;- loadSimulation(simPath)
+
+parameters &lt;- c(
+  getParameter(toPathString(c("Organism", "Liver", "Volume")), sim),
+  getParameter(toPathString(c("Organism", "Liver", "Volume")), sim),
+  getParameter(toPathString(c("Organism", "TableParameter")), sim)
+)
+
+# Return a list containing the two parameters 'Volume' and 'Weight (tissue)'
+uniqueEntities(parameters, CompareBy$id)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

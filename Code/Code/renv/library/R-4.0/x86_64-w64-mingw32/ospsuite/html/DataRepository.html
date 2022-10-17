@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: DataRepository</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for DataRepository {ospsuite}"><tr><td>DataRepository {ospsuite}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>DataRepository</h2>
+
+<h3>Description</h3>
+
+<p>An object typically holding observed data
+</p>
+
+
+<h3>Super classes</h3>
+
+<p><code><a href="../help/Printable.html">ospsuite::Printable</a></code> -&gt; <code><a href="../help/DotNetWrapper.html">ospsuite::DotNetWrapper</a></code> -&gt; <code>DataRepository</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>name</code></dt><dd><p>The name of the object.</p>
+</dd>
+<dt><code>baseGrid</code></dt><dd><p>Returns the base column for the data repository (typically time column).</p>
+</dd>
+<dt><code>columns</code></dt><dd><p>Returns all columns (including baseGrid) defined in the data repository.</p>
+</dd>
+<dt><code>allButBaseGrid</code></dt><dd><p>Returns all columns excluding baseGrid defined on the data repository.</p>
+</dd>
+<dt><code>metaData</code></dt><dd><p>Returns a named list of meta data defined for the data repository.
+where the name is the name of the metaData and the value is the meta data value.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-addColumn"><code>DataRepository$addColumn()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-new"><code>DataRepository$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>DataRepository$print()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-addMetaData"><code>DataRepository$addMetaData()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-removeMetaData"><code>DataRepository$removeMetaData()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+<ul>
+<li> <span class="pkg-link" data-pkg="ospsuite" data-topic="DotNetWrapper" data-id="finalize"><p><a href="../../ospsuite/html/DotNetWrapper.html#method-finalize"><code>ospsuite::DotNetWrapper$finalize()</code></a></span>
+</p>
+</li></ul>
+
+</details>
+
+<hr>
+<a id="method-addColumn"></a>
+
+
+
+<h4>Method <code>addColumn()</code></h4>
+
+<p>Adds a column to the data repository
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataRepository$addColumn(column)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>column</code></dt><dd><p>Column to add</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataRepository$new(ref = NULL)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>ref</code></dt><dd><p>Optional underlying DataRepository. If it is not provided, a new instance will be created</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>DataRepository</code> object.
+</p>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataRepository$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-addMetaData"></a>
+
+
+
+<h4>Method <code>addMetaData()</code></h4>
+
+<p>Adds a new entry to meta data list or changes its value if the name is already present.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataRepository$addMetaData(name, value)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>name</code></dt><dd><p>Name of new meta data list entry</p>
+</dd>
+<dt><code>value</code></dt><dd><p>Value of new meta data list entry</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-removeMetaData"></a>
+
+
+
+<h4>Method <code>removeMetaData()</code></h4>
+
+<p>Removes the meta data entry in the list if one is defined with this name
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataRepository$removeMetaData(name)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>name</code></dt><dd><p>Name of meta data entry to delete</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>ospsuite</em> version 10.0.70 <a href="00Index.html">Index</a>]</div>
+</div></body></html>
