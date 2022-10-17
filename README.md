@@ -12,4 +12,4 @@ MoBi®Version 9.1
 The model is distributed under the [GPLv2 License](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/LICENSE).
 
 ## References
-Baier, Vanessa, Alicia Paini, Stephan Schaller, Colin G. Scanes, Audrey J. Bone, Markus Ebeling, Thomas G. Preuss, Johannes Witt, and David Heckmann. 2022. “A Generic Avian Physiologically-Based Kinetic (PBK) Model and Its Application in Three Bird Species.” _Environment International_ 169 (November): 107547. [https://doi.org/10.1016/j.envint.2022.107547](https://doi.org/10.1016/j.envint.2022.107547).
+Vanessa Baier, Alicia Paini, Stephan Schaller, Colin G. Scanes, Audrey J. Bone, Markus Ebeling, Thomas G. Preuss, Johannes Witt, and David Heckmann. 2022. “A Generic Avian Physiologically-Based Kinetic (PBK) Model and Its Application in Three Bird Species.” _Environment International_ 169 (November): 107547. [https://doi.org/10.1016/j.envint.2022.107547](https://doi.org/10.1016/j.envint.2022.107547).
