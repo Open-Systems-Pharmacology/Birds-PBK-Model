@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Remove an entry from a list</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for removeFromList {esqlabsR}"><tr><td>removeFromList {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Remove an entry from a list</h2>
+
+<h3>Description</h3>
+
+<p>Removes all occurrences of the entry from the list. If the entry
+is not in the list nothing is removed.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+removeFromList(entry, listArg)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>entry</code></td>
+<td>
+<p>The entry to be removed</p>
+</td></tr>
+<tr valign="top"><td><code>listArg</code></td>
+<td>
+<p>The list from which the entry will be removed</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>The list without the entry. If the input is a vector, it is converted
+to a list.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+myList &lt;- list("one", "two", "one", "three")
+myList &lt;- removeFromList("one", myList)
+print(myList)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

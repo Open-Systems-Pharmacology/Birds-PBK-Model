@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Read parameter values from a structured Excel file. Each...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for readParametersFromXLS {esqlabsR}"><tr><td>readParametersFromXLS {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Read parameter values from a structured Excel file.
+Each excel sheet must consist of columns 'Container Path', 'Parameter Name',
+'Value', and 'Units'</h2>
+
+<h3>Description</h3>
+
+<p>Read parameter values from a structured Excel file.
+Each excel sheet must consist of columns 'Container Path', 'Parameter Name',
+'Value', and 'Units'
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+readParametersFromXLS(paramsXLSpath, sheets = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>paramsXLSpath</code></td>
+<td>
+<p>Path to the excel file</p>
+</td></tr>
+<tr valign="top"><td><code>sheets</code></td>
+<td>
+<p>Names of the excel sheets containing the information about the
+parameters. Multiple sheets can be processed. If no sheets are provided,
+the first one in the Excel file is used.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A list containing lists 'paths' with the full paths to the
+parameters, 'values' the values of the parameters, and 'units' with the
+units the values are in.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+export( .set )
+exportClasses( hash )
+
+importFrom("methods", "is", "new")
+
+S3method(as.list, hash)
+S3method(names, hash)

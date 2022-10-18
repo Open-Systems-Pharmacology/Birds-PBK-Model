@@ -1,5 +1,5 @@
 - Install R version 4.0.5 and RStudio
-- install renv
-- Install OSPS v10 (see also here https://docs.open-systems-pharmacology.org/working-with-r/introduction-ospsuite-r)
-- Open the project file Code/Birds.Rproj
+- Before opening the project make sure you have installed renv from CRAN
+- Open the project file Code/Code/Birds.Rproj
+- Check if renv is activated (RStudio Tools>Project Options>Environments)
 - Run Birds_main.R to generate the simulations and plots

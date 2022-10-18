@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Hill equation, transforming a value of an effector (e.g....</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for hillFunction {esqlabsR}"><tr><td>hillFunction {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Hill equation, transforming a value of an effector (e.g. concentration) to a
+saturable function value.</h2>
+
+<h3>Description</h3>
+
+<p>Hill equation, transforming a value of an effector (e.g. concentration) to a
+saturable function value.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+hillFunction(x, Vmax, Km, alpha = 1)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Value of the effector.</p>
+</td></tr>
+<tr valign="top"><td><code>Vmax</code></td>
+<td>
+<p>Maximal value of the function.</p>
+</td></tr>
+<tr valign="top"><td><code>Km</code></td>
+<td>
+<p>Value of the effector at which the value of the function is half-maximal.</p>
+</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+<p>Hill coefficient defining the steepness of the function. Default is <code>1</code>.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Vmax * x^alpha / (x^alpha + Km^alpha)
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

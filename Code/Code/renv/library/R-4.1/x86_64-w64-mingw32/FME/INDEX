@@ -1,0 +1,25 @@
+FME-package             A Flexible Modelling Environment for Inverse
+                        Modelling, Sensitivity, Identifiability, Monte
+                        Carlo Analysis.
+Grid                    Grid Distribution
+Latinhyper              Latin Hypercube Sampling
+Norm                    Normal Random Distribution
+Unif                    Uniform Random Distribution
+collin                  Estimates the Collinearity of Parameter Sets
+cross2long              Convert a dataset in wide (crosstab) format to
+                        long (database) format
+gaussianWeights         A kernel average smoother function to weigh
+                        residuals according to a Gaussian density
+                        function This function is still experimental...
+                        use with care
+modCRL                  Monte Carlo Analysis
+modCost                 Calculates the Discrepancy of a Model Solution
+                        with Observations
+modFit                  Constrained Fitting of a Model to Data
+modMCMC                 Constrained Markov Chain Monte Carlo
+obsplot                 Plot Method for observed data
+pseudoOptim             Pseudo-random Search Optimisation Algorithm of
+                        Price (1977)
+sensFun                 Local Sensitivity Analysis
+sensRange               Sensitivity Ranges of a Timeseries or 1-D
+                        Variables
