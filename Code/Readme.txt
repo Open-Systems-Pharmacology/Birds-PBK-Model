@@ -1,4 +1,4 @@
-- Install R version 4.0.5 and RStudio
+- Install R version 4.1.3 and RStudio
 - Before opening the project make sure you have installed renv from CRAN
 - Open the project file Code/Code/Birds.Rproj
 - Check if renv is activated (RStudio Tools>Project Options>Environments)
