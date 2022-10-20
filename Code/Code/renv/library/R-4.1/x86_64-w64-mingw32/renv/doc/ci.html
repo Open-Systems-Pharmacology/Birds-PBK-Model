@@ -29,14 +29,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-</style>
-
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
 
@@ -241,7 +240,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <p>When building, deploying, or testing with continuous integration (CI)
 systems (e.g. <a href="https://github.com/features/actions">GitHub
-Actions</a>, <a href="https://www.travis-ci.com/">Travis CI</a>, <a href="https://www.appveyor.com/">AppVeyor</a>, and others), one often
+Actions</a>, <a href="https://travis-ci.org/">Travis CI</a>, <a href="https://www.appveyor.com/">AppVeyor</a>, and others), one often
 needs to download and install a set of R packages before the service can
 be run. Normally, one will have to download and reinstall these packages
 on each build, which can often be slow – especially in environments
@@ -333,7 +332,7 @@ on how Travis manages caching.</p>
 <div id="gitlab-ci" class="section level2">
 <h2>GitLab CI</h2>
 <p>The following template can be used as a base when using
-<code>renv</code> with <a href="https://about.gitlab.com/features/continuous-integration/">GitLab
+<code>renv</code> with <a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/">GitLab
 CI</a>:</p>
 <pre><code>variables:
   RENV_CONFIG_REPOS_OVERRIDE: &quot;http://cran.r-project.org&quot;

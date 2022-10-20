@@ -1,4 +1,4 @@
-useDynLib("data_table", .registration=TRUE)
+useDynLib(datatable, .registration=TRUE)
 
 ## For S4-ization
 import(methods)
@@ -127,7 +127,8 @@ S3method(melt, data.table)
 export(melt.data.table, dcast.data.table)
 
 import(utils)
-export(update_dev_pkg)
+S3method(update, dev.pkg)
+export(update.dev.pkg)
 S3method(tail, data.table)
 S3method(head, data.table)
 import(stats)
