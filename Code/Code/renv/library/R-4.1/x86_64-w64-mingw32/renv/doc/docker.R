@@ -4,7 +4,3 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-## -----------------------------------------------------------------------------
-Sys.setenv(RENV_PATHS_CACHE = "~/path/to/cache")
-renv:::renv_paths_cache()
-

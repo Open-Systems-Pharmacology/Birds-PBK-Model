@@ -29,13 +29,14 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
 
 
 
@@ -254,7 +255,7 @@ their installation source.</li>
 <code>markdown</code> and <code>mime</code>:</p>
 <pre><code>{
   &quot;R&quot;: {
-    &quot;Version&quot;: &quot;4.1.2&quot;,
+    &quot;Version&quot;: &quot;4.2.1&quot;,
     &quot;Repositories&quot;: [
       {
         &quot;Name&quot;: &quot;CRAN&quot;,
@@ -284,6 +285,21 @@ lockfile, and by default writes these records to the file
 <code>renv.lock</code>. Later, if you need to reinstall the specific
 package versions as recorded in <code>renv.lock</code>, you can use
 <code>renv::restore()</code>.</p>
+<div id="package-records" class="section level2">
+<h2>Package Records</h2>
+<p>Package records are created using the currently-installed copies of
+packages as a “source of truth”. The fields written into each package
+record are derived from the installed package’s <code>DESCRIPTION</code>
+file.</p>
+<p>Note that the package records created from packages installed using
+<code>pak::pkg_install()</code> may have a format different from a
+package installed with <code>utils::install.packages()</code>. This is
+because <code>pak</code> writes out a variety of other metadata into the
+package <code>DESCRIPTION</code> file after installation, including a
+number of <code>Remote</code> fields that further describe where the
+package was retrieved from, and the type of package that was
+installed.</p>
+</div>
 
 
 

@@ -1,6 +1,5 @@
 activate                Activate a Project
 autoload                Auto-load the Active Project
-checkout                Checkout a Repository
 clean                   Clean a Project
 config                  User-Level Configuration of renv
 consent                 Consent to usage of renv
@@ -9,7 +8,6 @@ dependencies            Find R Package Dependencies in a Project
 diagnostics             Print a Diagnostics Report
 embed                   Embed a Lockfile
 equip                   Install Required System Libraries
-graph                   Generate a Package Dependency Graph
 history                 View Lockfile History
 hydrate                 Hydrate a Project
 imbue                   Imbue an renv Installation
@@ -20,7 +18,7 @@ load                    Load a Project
 lockfile                Programmatically Create and Modify a Lockfile
 lockfiles               Lockfiles
 migrate                 Migrate a Project from Packrat to renv
-modify                  Open the Lockfile for Editing
+modify                  Modify a Lockfile
 paths                   Path Customization
 project                 Retrieve the Active Project
 purge                   Purge Packages from the Cache
@@ -31,9 +29,6 @@ rehash                  Re-Hash Packages in the renv Cache
 remote                  Resolve a Remote
 remove                  Remove Packages
 renv-package            Project-local Environments for R
-renv_lockfile_from_manifest
-                        Generate 'renv.lock' from an RStudio Connect
-                        'manifest.json'
 repair                  Repair a Project Library
 restore                 Restore a Project
 revert                  Revert Lockfile
