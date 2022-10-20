@@ -5,6 +5,13 @@ Model files and R code of the studies from the published Birds PBK model evaluat
 ## Repository Files
 The repository contains simulation files with the base birds structure for the different partition coefficient calculation methods. These can be paramterised in R to get the simulation files used for the publication. In order to update simulations of the birds model in MoBi, the AllCalculationMethods.pkml file needs to be replaced.
 
+The folder `Code` contains all scripts to generate the simulations and plots used for the publication. If you want to reproduce the results you need to follow these steps:
+
+- Install R version 4.1.x (for using renv) and RStudio. ( If you want to use a different R version you need to install `renv` from CRAN, run `renv::restore()`, and manually install the packages `rClr`, `ospsuite`, and `esqlabsR` from `Code/packages`)
+- Before opening the project make sure you have installed renv from CRAN
+- Open the project file `Code/Code/Birds.Rproj`
+- Run Birds_main.R to generate the simulations and plots
+
 ## Version Information
 MoBi®Version 9.1
 
