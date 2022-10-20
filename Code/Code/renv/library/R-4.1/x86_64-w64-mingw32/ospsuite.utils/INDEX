@@ -1,0 +1,42 @@
+Printable               Printable
+enum                    Define an enumerated list
+enumGetKey              Get the key mapped to the given value in an
+                        'enum'
+enumGetValue            Get enum values
+enumHasKey              Check if an enum has a certain key.
+enumKeys                Get all keys of an enum
+enumPut                 Add a new key-value pairs to an 'enum'
+enumRemove              Remove an entry from the enum.
+enumValues              Get the values stored in an enum
+formatNumerics          formatNumerics
+getOSPSuiteUtilsSetting
+                        Get the value of a global '{ospsuite.utils}'
+                        package setting.
+hasEmptyStrings         Validate that no empty string is present
+hasOnlyDistinctValues   Validate that a vector has only unique values
+ifNotNull               Shortkey checking if argument 1 is not 'NULL',
+                        output the argument 2 if not null, or output
+                        argument 3 otherwise
+isEmpty                 Validate if the provided object is empty
+isFileExtension         Validate if the provided path has required
+                        extension
+isIncluded              Check if a vector of values is included in
+                        another vector of values
+isOfLength              Check if the provided object has expected
+                        length
+isOfType                Check if the provided object is of certain type
+isSameLength            Validate if objects are of same length
+messages                List of functions and strings used to signal
+                        error messages
+objectCount             Count number of objects
+op-null-default         Default value for 'NULL'
+ospsuiteUtilsSettingNames
+                        Names of the settings stored in 'ospsuiteEnv'.
+                        Can be used with 'getOSPSuiteUtilsSetting()'
+toList                  Make sure the object is a list
+validateEnumValue       Check if 'value' is in the given 'enum'. If
+                        not, stops with an error.
+validateIsOfType        Check if the provided object is of certain
+                        type. If not, stop with an error.
+validatePathIsAbsolute
+                        Check if path is absolute

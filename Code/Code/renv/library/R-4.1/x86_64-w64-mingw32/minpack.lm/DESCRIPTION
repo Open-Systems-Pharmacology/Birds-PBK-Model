@@ -1,0 +1,16 @@
+Package: minpack.lm
+Version: 1.2-2
+Title: R Interface to the Levenberg-Marquardt Nonlinear Least-Squares
+        Algorithm Found in MINPACK, Plus Support for Bounds
+Author: Timur V. Elzhov, Katharine M. Mullen, Andrej-Nikolai Spiess, Ben Bolker
+Maintainer: Katharine M. Mullen <mullenkate@gmail.com>
+Description: The nls.lm function provides an R interface to lmder and lmdif from the MINPACK library, for solving nonlinear least-squares problems by a modification of the Levenberg-Marquardt algorithm, with support for lower and upper parameter bounds.  The implementation can be used via nls-like calls using the nlsLM function.  
+Suggests: MASS
+License: GPL-3
+Copyright: inst/COPYRIGHTS
+NeedsCompilation: yes
+Repository: CRAN
+Packaged: 2022-04-13 07:00:39 UTC; kmm
+Date/Publication: 2022-04-13 08:02:33 UTC
+Built: R 4.1.3; x86_64-w64-mingw32; 2022-10-05 17:10:52 UTC; windows
+Archs: i386, x64

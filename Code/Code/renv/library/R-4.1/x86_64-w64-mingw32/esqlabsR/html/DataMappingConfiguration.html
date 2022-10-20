@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: DataMappingConfiguration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for DataMappingConfiguration {esqlabsR}"><tr><td>DataMappingConfiguration {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>DataMappingConfiguration</h2>
+
+<h3>Description</h3>
+
+<p>An object storing configuration of a data mapping
+</p>
+
+
+<h3>Super class</h3>
+
+<p><code><a href="../../ospsuite/help/Printable.html">ospsuite::Printable</a></code> -&gt; <code>DataMappingConfiguration</code>
+</p>
+
+
+<h3>Active bindings</h3>
+
+<div class="r6-active-bindings">
+
+<dl>
+<dt><code>xFactors</code></dt><dd><p>A named list listing numerical values that x-values are multiplied by. Keys are names of data sets,
+values are numerical factors.</p>
+</dd>
+<dt><code>yFactors</code></dt><dd><p>A named list listing numerical values that y-values are multiplied by. Keys are names of data sets,
+values are numerical factors.</p>
+</dd>
+<dt><code>xOffsets</code></dt><dd><p>A named list listing numerical values that will be added to the x-values. Keys are names of data sets,
+values are numerical values</p>
+</dd>
+<dt><code>yOffsets</code></dt><dd><p>A named list listing numerical values that will be added to the y-values. Keys are names of data sets,
+values are numerical values</p>
+</dd>
+<dt><code>lineTypes</code></dt><dd><p>A named list listing line types that will be used to plot a certain data set. Keys are names of data sets,
+values are numerical values recognized by the <code>lty</code> argument of the <code><a href="../../graphics/html/plot.default.html">plot()</a></code> function</p>
+</dd>
+<dt><code>colors</code></dt><dd><p>A named list listing color values that will be used to plot a certain data set. Keys are names of data sets,
+values are values recognized by the <code>col</code> argument of the <code><a href="../../graphics/html/plot.default.html">plot()</a></code> function</p>
+</dd>
+</dl>
+
+</div>
+
+
+<h3>Methods</h3>
+
+
+
+<h4>Public methods</h4>
+
+
+<ul>
+<li> <p><a href="#method-new"><code>DataMappingConfiguration$new()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-finalize"><code>DataMappingConfiguration$finalize()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setXFactors"><code>DataMappingConfiguration$setXFactors()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setYFactors"><code>DataMappingConfiguration$setYFactors()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setXOffsets"><code>DataMappingConfiguration$setXOffsets()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setYOffsets"><code>DataMappingConfiguration$setYOffsets()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setColors"><code>DataMappingConfiguration$setColors()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-setLineTypes"><code>DataMappingConfiguration$setLineTypes()</code></a>
+</p>
+</li>
+<li> <p><a href="#method-print"><code>DataMappingConfiguration$print()</code></a>
+</p>
+</li></ul>
+
+
+
+<details open ><summary>Inherited methods</summary>
+
+
+</details>
+
+<hr>
+<a id="method-new"></a>
+
+
+
+<h4>Method <code>new()</code></h4>
+
+<p>Initialize a new instance of the class
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$new()</pre></div>
+
+
+
+<h5>Returns</h5>
+
+<p>A new <code>DataMappingConfiguration</code> object.
+</p>
+
+
+<hr>
+<a id="method-finalize"></a>
+
+
+
+<h4>Method <code>finalize()</code></h4>
+
+<p>Clean up upon object removal
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$finalize()</pre></div>
+
+
+<hr>
+<a id="method-setXFactors"></a>
+
+
+
+<h4>Method <code>setXFactors()</code></h4>
+
+<p>Set the values of x-factors. An x-factor will be multiplied by the x-values of the data set.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$setXFactors(labels, xFactors)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>labels</code></dt><dd><p>A string or a list of strings representing the names of the data sets</p>
+</dd>
+<dt><code>xFactors</code></dt><dd><p>A numerical value or a list of numerical values representing the x-factors. Both lists must be of same length
+and store the entries in the same order.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setYFactors"></a>
+
+
+
+<h4>Method <code>setYFactors()</code></h4>
+
+<p>Set the values of y-factors. A y-factor will be multiplied by the y-values of the data set.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$setYFactors(labels, yFactors)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>labels</code></dt><dd><p>A string or a list of strings representing the names of the data sets</p>
+</dd>
+<dt><code>yFactors</code></dt><dd><p>A numerical value or a list of numerical values representing the y-factors. Both lists must be of same length
+and store the entries in the same order.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setXOffsets"></a>
+
+
+
+<h4>Method <code>setXOffsets()</code></h4>
+
+<p>Set the values of x-offsets. An x-offset will be added to the the x-values of the data set.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$setXOffsets(labels, xOffsets)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>labels</code></dt><dd><p>A string or a list of strings representing the names of the data sets</p>
+</dd>
+<dt><code>xOffsets</code></dt><dd><p>A numerical value or a list of numerical values representing the x-offsets. Both lists must be of same length
+and store the entries in the same order.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setYOffsets"></a>
+
+
+
+<h4>Method <code>setYOffsets()</code></h4>
+
+<p>Set the values of y-offsets. A y-offset will be added to the the y-values of the data set.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$setYOffsets(labels, yOffsets)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>labels</code></dt><dd><p>A string or a list of strings representing the names of the data sets</p>
+</dd>
+<dt><code>yOffsets</code></dt><dd><p>A numerical value or a list of numerical values representing the y-offsets. Both lists must be of same length
+and store the entries in the same order.</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setColors"></a>
+
+
+
+<h4>Method <code>setColors()</code></h4>
+
+<p>Set the colors that will be used to plot a certain data set.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$setColors(labels, colors)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>labels</code></dt><dd><p>A string or a list of strings representing the names of the data sets</p>
+</dd>
+<dt><code>colors</code></dt><dd><p>Values representing a color recognized by the <code>col</code> argument of the <code><a href="../../graphics/html/plot.default.html">plot()</a></code> function</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-setLineTypes"></a>
+
+
+
+<h4>Method <code>setLineTypes()</code></h4>
+
+<p>Set the line types that will be used to plot a certain data set.
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$setLineTypes(labels, lineTypes)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>labels</code></dt><dd><p>A string or a list of strings representing the names of the data sets</p>
+</dd>
+<dt><code>lineTypes</code></dt><dd><p>Values recognized by the <code>col</code> argument of the <code><a href="../../graphics/html/plot.default.html">plot()</a></code> function</p>
+</dd>
+</dl>
+
+</div>
+
+
+<hr>
+<a id="method-print"></a>
+
+
+
+<h4>Method <code>print()</code></h4>
+
+<p>Print the object to the console
+</p>
+
+
+<h5>Usage</h5>
+
+<div class="r"><pre>DataMappingConfiguration$print(...)</pre></div>
+
+
+
+<h5>Arguments</h5>
+
+<div class="arguments">
+
+<dl>
+<dt><code>...</code></dt><dd><p>Rest arguments.</p>
+</dd>
+</dl>
+
+</div>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

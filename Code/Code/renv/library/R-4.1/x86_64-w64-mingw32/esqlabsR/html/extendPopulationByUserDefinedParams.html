@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Add user defined variability on parameters to a population.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for extendPopulationByUserDefinedParams {esqlabsR}"><tr><td>extendPopulationByUserDefinedParams {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Add user defined variability on parameters to a population.</h2>
+
+<h3>Description</h3>
+
+<p>Add user defined variability on parameters to a population.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+extendPopulationByUserDefinedParams(
+  population,
+  parameterPaths,
+  meanValues,
+  sdValues,
+  distributions = Distributions$Normal
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>population</code></td>
+<td>
+<p>Object of type <code>Population</code></p>
+</td></tr>
+<tr valign="top"><td><code>parameterPaths</code></td>
+<td>
+<p>Vector of parameter path for which the variability is to be added.</p>
+</td></tr>
+<tr valign="top"><td><code>meanValues</code></td>
+<td>
+<p>Vector of mean values of the parameters. Must have the same
+length as <code>parameterPaths</code>. The type of mean (arithmetic, geometric)
+depends on the selected <code>distribution</code>. The values must be in the base
+units of the parameters.</p>
+</td></tr>
+<tr valign="top"><td><code>sdValues</code></td>
+<td>
+<p>Vector of standard deviation values of the parameters. Must
+have the same length as <code>parameterPaths</code>. The type of standard deviation
+depends on the selected <code>distribution</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>distributions</code></td>
+<td>
+<p>Type of distribution from which the random values will
+be sampled. Must have the same length as <code>parameterPaths</code>.
+A list of supported distributions is defined in <code>Distributions</code>. Default is <code>"Normal"</code>.</p>
+</td></tr>
+</table>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

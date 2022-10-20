@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Calculate the root mean square error for groupings in...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for calculateRMSE {esqlabsR}"><tr><td>calculateRMSE {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Calculate the root mean square error for groupings in <code>dataMapping</code>s</h2>
+
+<h3>Description</h3>
+
+<p>Calculate the root mean square error for groupings in <code>dataMapping</code>s
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+calculateRMSE(dataMappingList, timeDiffThreshold = 10)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dataMappingList</code></td>
+<td>
+<p>A <code>DataMapping</code> or a list of <code>DataMapping</code> objects.</p>
+</td></tr>
+<tr valign="top"><td><code>timeDiffThreshold</code></td>
+<td>
+<p>Allowed difference between observed and simulated
+time values in minutes. Default is 10. If for a certain observed point no
+simulated time point exists within the defined threshold, the value is not
+considered.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The error is calculated for each group separately and added up. For
+each group, the error is defined as the root of the sum of the squared
+residuals between each simulated result and observed data.
+</p>
+
+
+<h3>Value</h3>
+
+<p>Total error for all groups across all provided data mappings.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

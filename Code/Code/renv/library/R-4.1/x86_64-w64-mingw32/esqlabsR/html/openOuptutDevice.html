@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Open an output device.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for openOuptutDevice {esqlabsR}"><tr><td>openOuptutDevice {esqlabsR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Open an output device.</h2>
+
+<h3>Description</h3>
+
+<p>Open an output device.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+openOuptutDevice(plotConfiguration, width, height)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>plotConfiguration</code></td>
+<td>
+<p>An object of type <code>PlotConfiguration</code></p>
+</td></tr>
+<tr valign="top"><td><code>width</code></td>
+<td>
+<p>Width of the output figure</p>
+</td></tr>
+<tr valign="top"><td><code>height</code></td>
+<td>
+<p>Height of the output figure</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>If the output of the plot is directed to a file, open the
+connection. A list of supported outputs is provided in
+<code>GraphicsDevices</code>-enum. If the provided output defined in
+PlotConfiguration$outputDevice is not supported or the value is <code>NULL</code>,
+output is directed to the default plot frame.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>esqlabsR</em> version 1.2.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>
