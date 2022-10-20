@@ -12,6 +12,8 @@ The folder `Code` contains all scripts to generate the simulations and plots use
 - Open the project file `Code/Code/Birds.Rproj`
 - Run Birds_main.R to generate the simulations and plots
 
+> Note: If you download the Code as a .zip file you might need to enable .dll loading by checking the box "Unblock" under right-click on the .zip file > Properties > Security
+
 ## Version Information
 MoBi®Version 9.1
 
