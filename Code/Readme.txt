@@ -1,5 +1,0 @@
-- Install R version 4.0.5 and RStudio
-- Before opening the project make sure you have installed renv from CRAN
-- Open the project file Code/Code/Birds.Rproj
-- Check if renv is activated (RStudio Tools>Project Options>Environments)
-- Run Birds_main.R to generate the simulations and plots
